@@ -36,7 +36,7 @@ int main() {
 
         switch ((Hit == GEM) ? 0 : (Hit < GEM) ? -1 : 1) {
             case 0:
-                cout << "That's The Correct Number! You Took " << attempts << " Attempts.\n";
+                cout << "That's The Correct Number! You Took " << attempts << " Attempt(s).\n";
                 return 0;
             case -1:
                 cout << "That's Too Low!\n";
