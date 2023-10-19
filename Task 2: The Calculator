@@ -1,0 +1,54 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "The Calculator!" << endl;
+    double n1, n2, result;
+    char op;
+    bool validity;
+
+    do {
+        cout << "Enter 1st Number: ";
+        cin >> n1;
+        cout << "Enter 2nd Number: ";
+        cin >> n2;
+
+        cout << "Select Operation (+, -, *, /): ";
+        cin >> op;
+
+        validity = true;
+        switch(op) {
+            case '+':
+            case '-':
+            case '*':
+            case '/':
+                break;
+            default:
+                cout << "Select An Operator Out Of These 4. Try Again...." << endl;
+                validity = false;
+        }
+    } while (!validity);
+
+    switch(op) {
+        case '+':
+            result = n1 + n2;
+            break;
+        case '-':
+            result = n1 - n2;
+            break;
+        case '*':
+            result = n1 * n2;
+            break;
+        case '/':
+            if (n2 != 0) {
+                result = n1 / n2;
+                break;
+            } else {
+                cout << "Division By Zero Ain't Possible" << endl;
+                return 1;
+            }
+            
+    }
+    cout << "Result: " << result << endl;
+    return 0;
+}
